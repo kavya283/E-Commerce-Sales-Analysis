@@ -92,7 +92,9 @@ SELECT
 FROM sales
 GROUP BY Customer_Name;
 
-📗 Excel Analysis
+---
+
+### 📗 Excel Analysis
 
 Excel was used for exploratory analysis, calculations and dashboard development.
 
@@ -110,65 +112,74 @@ Payment mode analysis
 Profitability analysis
 Interactive slicers
 
-📊 Power BI Dashboard
+---
+
+### 📊 Power BI Dashboard
 
 The Power BI report contains 3 interactive pages.
 
-Page 1 — E-Commerce Sales Executive Dashboard
+### Page 1 — E-Commerce Sales Executive Dashboard
 
 Provides a high-level overview of overall business performance.
 
-KPIs
+### KPIs
 Total Sales
 Total Profit
 Total Orders
 Total Customers
 Average Order Value
 Profit Margin
-Visualizations
+
+### Visualizations
 Sales by Category
 Monthly Sales Trend
 Sales by Region
 Top 10 Customers
 KPI Cards
 Interactive Slicers
-Page 2 — Product & Regional Profitability Analysis
+
+### Page 2 — Product & Regional Profitability Analysis
 
 This page focuses on product, category and regional profitability.
 
-Product Performance
+### Product Performance
 Rank	Product	Sales	Profit	Margin
-1	Laptop	₹93.08 L	₹23.58 L	25.34%
-2	Smartphone	₹29.06 L	₹6.95 L	23.92%
-3	Study Table	₹14.89 L	₹3.75 L	25.15%
-4	Office Chair	₹13.88 L	₹3.67 L	26.43%
-5	Bookshelf	₹9.91 L	₹2.66 L	26.84%
+| Rank | Product      |    Sales |   Profit | Margin |
+| ---- | ------------ | -------: | -------: | -----: |
+| 1    | **Laptop**   | ₹93.08 L | ₹23.58 L | 25.34% |
+| 2    | Smartphone   | ₹29.06 L |  ₹6.95 L | 23.92% |
+| 3    | Study Table  | ₹14.89 L |  ₹3.75 L | 25.15% |
+| 4    | Office Chair | ₹13.88 L |  ₹3.67 L | 26.43% |
+| 5    | Bookshelf    |  ₹9.91 L |  ₹2.66 L | 26.84% |
 
 Highest product profit margin: Smartwatch — 27.15%
 
-Regional Performance
-Region	Sales	Profit	Margin
-West	₹61.04 L	₹14.47 L	23.71%
-East	₹39.99 L	₹9.76 L	24.39%
-North	₹55.85 L	₹14.38 L	25.75%
-South	₹56.53 L	₹15.35 L	27.16%
+### Regional Performance
+| Region    |    Sales |       Profit |     Margin |
+| --------- | -------: | -----------: | ---------: |
+| **West**  | ₹61.04 L |     ₹14.47 L |     23.71% |
+| East      | ₹39.99 L |      ₹9.76 L |     24.39% |
+| North     | ₹55.85 L |     ₹14.38 L |     25.75% |
+| **South** | ₹56.53 L | **₹15.35 L** | **27.16%** |
 
 Highest sales: West
 Highest profit: South
 Highest regional margin: South — 27.16%
 
-Category Performance
-Category	Sales	Profit	Margin
-Electronics	₹1.44 Cr	₹36.23 L	25.15%
-Furniture	₹38.68 L	₹10.07 L	26.04%
-Fashion	₹15.96 L	₹3.95 L	24.72%
-Home & Living	₹10.43 L	₹2.65 L	25.37%
-Grocery	₹4.28 L	₹1.07 L	24.96%
-Page 3 — Customer & Order Performance
+### Category Performance
+| Category        |    Sales |   Profit |     Margin |
+| --------------- | -------: | -------: | ---------: |
+| **Electronics** | ₹1.44 Cr | ₹36.23 L |     25.15% |
+| Furniture       | ₹38.68 L | ₹10.07 L | **26.04%** |
+| Fashion         | ₹15.96 L |  ₹3.95 L |     24.72% |
+| Home & Living   | ₹10.43 L |  ₹2.65 L |     25.37% |
+| Grocery         |  ₹4.28 L |  ₹1.07 L |     24.96% |
+
+### Page 3 — Customer & Order Performance
 
 This page focuses on customer contribution and order performance.
 
-Analysis included
+### Analysis included
 Order Status Distribution
 Delivered Orders
 Cancelled Orders
@@ -178,12 +189,18 @@ Cancellation Rate
 Top 10 Products
 Top 10 Customers
 Interactive Slicers
-Order Status
-Status	Orders	Percentage
-Delivered	1,372	91.47%
-Cancelled	85	5.67%
-Returned	43	2.87%
-💡 Key Business Insights
+
+### Order Status
+
+| Status        | Orders | Percentage |
+| ------------- | -----: | ---------: |
+| **Delivered** |  1,372 | **91.47%** |
+| Cancelled     |     85 |      5.67% |
+| Returned      |     43 |      2.87% |
+
+
+### 💡 Key Business Insights
+
 1. Electronics drives overall revenue
 
 Electronics generated approximately ₹1.44 Cr in sales, contributing around 67.5% of total revenue.
@@ -222,38 +239,17 @@ UPI accounted for 531 orders and approximately 34.05% of total sales, making it 
 
 August generated approximately ₹25.88 Lakh in sales and ₹6.16 Lakh in profit.
 
-🧮 Key DAX Measures
-Total Sales
-Total Sales =
-SUM(Sales_Data[Sales])
-Total Profit
-Total Profit =
-SUM(Sales_Data[Profit])
-Total Orders
-Total Orders =
-DISTINCTCOUNT(Sales_Data[Order_ID])
-Total Customers
-Total Customers =
-DISTINCTCOUNT(Sales_Data[Customer_ID])
-Average Order Value
-Average Order Value =
-DIVIDE(
-    [Total Sales],
-    [Total Orders]
-)
-Profit Margin
-Profit Margin % =
-DIVIDE(
-    [Total Profit],
-    [Total Sales]
-)
-Return Rate
-Return Rate % =
-DIVIDE(
-    [Returned Orders],
-    [Total Orders]
-)
-🏗️ Power BI Data Model
+### 🧮 Key DAX Measures
+Total Sales: Total Sales =SUM(Sales_Data[Sales])
+Total Profit: Total Profit =SUM(Sales_Data[Profit])
+Total Orders: Total Orders =DISTINCTCOUNT(Sales_Data[Order_ID])
+Total Customers: Total Customers =DISTINCTCOUNT(Sales_Data[Customer_ID])
+Average Order Value: Average Order Value =DIVIDE([Total Sales],[Total Orders])
+Profit Margin: Profit Margin % =DIVIDE([Total Profit],[Total Sales])
+Return Rate: Return Rate % =DIVIDE([Returned Orders],[Total Orders])
+
+
+### 🏗️ Power BI Data Model
 
 The report uses a star-schema data model.
 
@@ -265,9 +261,11 @@ Dim_Product ─────► Sales_Data ◄───── Dim_Customer
                        ▲
                        │
                   Dim_Location
-Fact Table
+
+### Fact Table
 Sales_Data
-Dimension Tables
+
+### Dimension Tables
 Dim_Date
 Dim_Product
 Dim_Customer
@@ -275,15 +273,21 @@ Dim_Location
 
 The model allows interactive filtering across products, customers, locations and dates.
 
-📷 Dashboard Preview
+### 📷 Dashboard Preview
+<img width="1306" height="691" alt="E-Commerce_Sales_Executive_Dashboard" src="https://github.com/user-attachments/assets/500b9d58-239b-4287-b330-7c6f4f6567f7" />
 
-📁 Project Files
-E-Commerce_dashboard.pbix – Power BI dashboard
-E-commerce Sales Dashboard.xlsx – Excel analysis and dashboard
+
+### 📁 Project Files
+
+ecommerce_sales_analysis.pbix – Power BI dashboard
+ecommerce_sales_analysis.xlsx – Excel analysis and dashboard
 ecommerce_sales_analysis_dataset.csv – Source dataset
-E-commerce Sales Dashboard.png – Dashboard preview
+E-Commerce_Sales_Executive_Dashboard.png – Dashboard preview
+Customer_&_Order_Performance.png – Customer & Order Performance preview
+Product_&_Regional_Profitability_Analysis.png – Product & Regional Profitability Analysis preview
 README.md – Project documentation
-🎯 Business Objective
+
+### 🎯 Business Objective
 
 The objective of this project was to transform raw e-commerce transaction data into an interactive analytics solution that helps understand:
 
@@ -295,15 +299,18 @@ Customer contribution
 Sales trends
 Payment preferences
 Returns and cancellations
-🚀 Skills Demonstrated
-Data Analysis
+
+### 🚀 Skills Demonstrated
+
+### Data Analysis
 Exploratory Data Analysis
 KPI Analysis
 Customer Analysis
 Product Analysis
 Profitability Analysis
 Business Insights
-SQL
+
+### SQL
 Aggregations
 GROUP BY
 CASE statements
@@ -311,20 +318,23 @@ CTEs
 Subqueries
 Window Functions
 Ranking
-Excel
+
+### Excel
 Data Cleaning
 Pivot Tables
 Pivot Charts
 KPI Dashboard
 Slicers
-Power BI
+
+### Power BI
 Data Modeling
 Star Schema
 Relationships
 DAX
 Interactive Dashboards
 Data Visualization
-👩‍💻 Author
+
+### 👩‍💻 Author
 
 Kavya Rami
 
